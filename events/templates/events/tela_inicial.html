@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Sistema</h1>
+
+{% if user.is_authenticated %}
+    <p>Olá, {{ user.username }}!</p>
+    <a href="{% url 'logout' %}">Sair</a>
+{% else %}
+    <a href="{% url 'login' %}">Login</a> |
+    <a href="{% url 'cadastro' %}">Cadastre-se</a>
+{% endif %}
+
+    <h1>Bem-vindo ao Gerenciamento de Eventos!</h1>
+    <p>Escolha uma opção abaixo:</p>
+    <ul>
+        <li><a href="{% url 'painel_controle' %}">Ir para o painel de controle</a></li>
+    </ul>
+</body>
+</html>
+Exemplo de painel_controle.html:
+html
+Copiar
+Editar
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle</title>
+</head>
+<body>
+    <h1>Painel de Controle</h1>
+    <p>Aqui você pode gerenciar seus eventos.</p>
+    <ul>
+        <li><a href="#">Criar novo evento</a></li>
+        <li><a href="#">Visualizar meus eventos</a></li>
+    </ul>
+</body>
+</html>
