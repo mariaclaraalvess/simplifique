@@ -1,0 +1,66 @@
+/* style.css */
+
+/* Importando a fonte Alexandria */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão para o corpo */
+    background-color: #9B5DE5; /* Cor de fundo da página restante */
+    margin: 0; /* Remover margem padrão do body */
+}
+
+header {
+    background-color: #7140AD; /* Cor de fundo do cabeçalho */
+    height: 140px; /* Altura do cabeçalho */
+    color: white; /* Cor do texto */
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura da página */
+    display: flex; /* Usar flexbox para disposição dos itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between; /* Alinha os itens à esquerda e à direita */
+    padding: 0 20px; /* Espaçamento horizontal */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+}
+
+.logo {
+    height: 90px; /* Tamanho da logo */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-left: 80px; /* Distância da borda esquerda */
+}
+
+nav.menu {
+    display: flex; /* Disposição horizontal dos links */
+    justify-content: center; /* Alinha os links no centro */
+    flex-grow: 1; /* Faz com que o menu ocupe o espaço restante */
+    text-align: center;
+    gap: 300px; /* Espaçamento bem pequeno entre os itens */
+}
+
+nav.menu a {
+    font-family: 'Alexandria', serif; /* Usando a fonte Alexandria */
+    font-size: 2.5em; /* Tamanho da fonte dos links */
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 0; /* Remove qualquer padding extra */
+}
+
+nav.menu a:hover {
+    text-decoration: underline; /* Sublinha os links ao passar o mouse */
+}
+
+.login-btn {
+    font-family: 'Alexandria', serif; /* Fonte do botão de login */
+    font-size: 2.1em; /* Aumentado o tamanho da fonte do botão */
+    color: white; /* Cor do texto do botão */
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid white; /* Borda branca */
+    padding: 16px 35px; /* Aumentado o espaçamento interno do botão */
+    border-radius: 35px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block;
+    margin-right: 80px; /* Distância de 40px da borda esquerda */
+}
+
+.login-btn:hover {
+    background-color: white; /* Cor de fundo do botão ao passar o mouse */
+    color: #7140AD; /* Cor do texto ao passar o mouse */
+}
