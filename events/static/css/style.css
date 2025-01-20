@@ -3,28 +3,36 @@
 /* Importando a fonte Alexandria */
 @import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif; /* Fonte padrão para o corpo */
     background-color: #9B5DE5; /* Cor de fundo da página restante */
     margin: 0; /* Remover margem padrão do body */
+    font-size: 16px; /* Tamanho base da fonte */
+    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
 header {
     background-color: #7140AD; /* Cor de fundo do cabeçalho */
-    height: 300px; /* Aumentada a altura do cabeçalho */
+    height: 65px; /* Altura fixa para o cabeçalho */
     color: white; /* Cor do texto */
     width: 100%; /* Garante que o cabeçalho ocupe toda a largura da página */
     display: flex; /* Usar flexbox para disposição dos itens */
     align-items: center; /* Alinha os itens verticalmente ao centro */
     justify-content: space-between; /* Alinha os itens à esquerda e à direita */
-    padding: 0 30px; /* Aumentado o espaçamento horizontal */
+    padding: 0 2rem; /* Espaçamento horizontal */
     box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
 }
 
 .logo {
-    height: 250px; /* Aumentado o tamanho da logo */
+    height: 3rem; /* Altura ajustada para a logo */
     width: auto; /* Mantém a proporção da imagem */
-    margin-left: 100px; /* Distância da borda esquerda */
+    margin-left: 2rem; /* Distância da borda esquerda */
 }
 
 nav.menu {
@@ -32,12 +40,12 @@ nav.menu {
     justify-content: center; /* Alinha os links no centro */
     flex-grow: 1; /* Faz com que o menu ocupe o espaço restante */
     text-align: center;
-    gap: 500px; /* Aumentado o espaçamento entre os itens */
+    gap: 6rem; /* Ajustado o espaçamento entre os itens */
 }
 
 nav.menu a {
     font-family: 'Alexandria', serif; /* Usando a fonte Alexandria */
-    font-size: 4.5em; /* Aumentado o tamanho da fonte dos links */
+    font-size: 1.2rem; /* Ajustado o tamanho da fonte dos links */
     color: white; /* Cor do texto dos links */
     text-decoration: none; /* Remove o sublinhado */
     padding: 0; /* Remove qualquer padding extra */
@@ -49,15 +57,15 @@ nav.menu a:hover {
 
 .login-btn {
     font-family: 'Alexandria', serif; /* Fonte do botão de login */
-    font-size: 4em; /* Aumentado o tamanho da fonte do botão */
+    font-size: 1.0rem; /* Ajustado o tamanho da fonte do botão */
     color: white; /* Cor do texto do botão */
     background-color: transparent; /* Fundo transparente */
-    border: 3px solid white; /* Aumentada a espessura da borda */
-    padding: 35px 120px; /* Aumentado o espaçamento interno do botão */
-    border-radius: 120px; /* Bordas mais arredondadas */
+    border: 3px solid white; /* Espessura da borda */
+    padding: 0.4rem 2rem; /* Ajustado o espaçamento interno do botão */
+    border-radius: 50px; /* Bordas arredondadas */
     text-decoration: none; /* Remove sublinhado */
     display: inline-block;
-    margin-right: 100px; /* Distância de 100px da borda direita */
+    margin-right: 2rem; /* Distância da borda direita */
 }
 
 .login-btn:hover {
