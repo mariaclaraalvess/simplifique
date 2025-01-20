@@ -24,7 +24,7 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espaço entre logo e botão de login */
+    justify-content: space-between;
     padding: 0 2rem;
     box-sizing: border-box;
 }
@@ -77,39 +77,30 @@ nav.menu a:hover {
 main.content {
     display: flex;
     justify-content: space-between;
-    height: calc(100vh - 65px); /* Subtrai a altura do cabeçalho */
+    height: calc(100vh - 65px);
 }
 
 .left-section {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Alinha o conteúdo verticalmente */
-    align-items: flex-start; /* Alinha os itens à esquerda na metade esquerda */
-    padding-left: 2rem; /* Alinha o conteúdo à esquerda */
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
 }
 
 .left-logo {
-    max-width: 70%; /* Limita a largura da logo para 70% */
-    height: auto; /* Ajusta a altura proporcionalmente */
-    margin: 0 auto 2rem auto; /* Centraliza a logo na metade esquerda */
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto 2rem auto;
 }
 
-.intro-text {
+.intro-text, .intro-text2 {
     font-family: 'Alexandria', serif;
     font-size: 1.2rem;
     color: white;
     margin-bottom: 2rem;
-    text-align: left; /* Alinha o texto à esquerda */
-    line-height: 0.5;
-}
-
-.intro-text2 {
-    font-family: 'Alexandria', serif;
-    font-size: 1.2rem;
-    color: white;
-    margin-bottom: 2rem;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
     line-height: 0.5;
 }
 
@@ -123,7 +114,6 @@ main.content {
     border-radius: 50px;
     text-decoration: none;
     display: inline-block;
-    align-self: flex-start; /* Alinha o botão de login à esquerda */
 }
 
 .left-btn-login:hover {
@@ -137,4 +127,52 @@ main.content {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+}
+
+.calendario {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 340px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendario-header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #666;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.dia-atual {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.fim-de-semana {
+    color: #888;
 }

@@ -8,6 +8,7 @@
     <title>Tela Inicial</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Alexandria&display=swap" rel="stylesheet"> <!-- Importando a fonte Alexandria -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css">
 </head>
 <body>
     <header>
@@ -42,8 +43,36 @@
             <a href="{% url 'login' %}" class="login-btn">Login</a>
         </div>
 
-        <!-- Lado direito permanece vazio -->
-        <div class="right-section"></div>
+        <!-- Lado direito com o calendário -->
+        <div class="right-section">
+            <div id="calendario">
+                <button id="prev-ano"><<</button>
+                <button id="prev-mes"><</button>
+                <span id="mes-ano"></span>
+                <button id="next-mes">></button>
+                <button id="next-ano">>></button>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Dom</th>
+                      <th>Seg</th>
+                      <th>Ter</th>
+                      <th>Qua</th>
+                      <th>Qui</th>
+                      <th>Sex</th>
+                      <th>Sáb</th>
+                    </tr>
+                  </thead>
+                  <tbody id="dias-calendario"></tbody>
+                </table>
+              </div>              
+        </div>
     </main>
+
+    <!-- Scripts necessários -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
