@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Importando a fonte Alexandria */
 @import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
 
@@ -10,65 +8,133 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Fonte padrão para o corpo */
-    background-color: #9B5DE5; /* Cor de fundo da página restante */
-    margin: 0; /* Remover margem padrão do body */
-    font-size: 16px; /* Tamanho base da fonte */
-    overflow-x: hidden; /* Impede rolagem horizontal */
+    font-family: Arial, sans-serif;
+    background-color: #9B5DE5;
+    margin: 0;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
+/* --- CONFIGURAÇÕES DO CABEÇALHO --- */
+
 header {
-    background-color: #7140AD; /* Cor de fundo do cabeçalho */
-    height: 65px; /* Altura fixa para o cabeçalho */
-    color: white; /* Cor do texto */
-    width: 100%; /* Garante que o cabeçalho ocupe toda a largura da página */
-    display: flex; /* Usar flexbox para disposição dos itens */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: space-between; /* Alinha os itens à esquerda e à direita */
-    padding: 0 2rem; /* Espaçamento horizontal */
-    box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+    background-color: #7140AD;
+    height: 65px;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre logo e botão de login */
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 .logo {
-    height: 3rem; /* Altura ajustada para a logo */
-    width: auto; /* Mantém a proporção da imagem */
-    margin-left: 2rem; /* Distância da borda esquerda */
+    height: 3rem;
+    width: auto;
 }
 
 nav.menu {
-    display: flex; /* Disposição horizontal dos links */
-    justify-content: center; /* Alinha os links no centro */
-    flex-grow: 1; /* Faz com que o menu ocupe o espaço restante */
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
     text-align: center;
-    gap: 6rem; /* Ajustado o espaçamento entre os itens */
+    gap: 6rem;
 }
 
 nav.menu a {
-    font-family: 'Alexandria', serif; /* Usando a fonte Alexandria */
-    font-size: 1.2rem; /* Ajustado o tamanho da fonte dos links */
-    color: white; /* Cor do texto dos links */
-    text-decoration: none; /* Remove o sublinhado */
-    padding: 0; /* Remove qualquer padding extra */
+    font-family: 'Alexandria', serif;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    padding: 0;
 }
 
 nav.menu a:hover {
-    text-decoration: underline; /* Sublinha os links ao passar o mouse */
+    text-decoration: underline;
 }
 
 .login-btn {
-    font-family: 'Alexandria', serif; /* Fonte do botão de login */
-    font-size: 1.0rem; /* Ajustado o tamanho da fonte do botão */
-    color: white; /* Cor do texto do botão */
-    background-color: transparent; /* Fundo transparente */
-    border: 3px solid white; /* Espessura da borda */
-    padding: 0.4rem 2rem; /* Ajustado o espaçamento interno do botão */
-    border-radius: 50px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove sublinhado */
+    font-family: 'Alexandria', serif;
+    font-size: 1.0rem;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    padding: 0.4rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
     display: inline-block;
-    margin-right: 2rem; /* Distância da borda direita */
+    margin-right: 2rem;
 }
 
 .login-btn:hover {
-    background-color: white; /* Cor de fundo do botão ao passar o mouse */
-    color: #7140AD; /* Cor do texto ao passar o mouse */
+    background-color: white;
+    color: #7140AD;
+}
+
+/* --- CONFIGURAÇÕES DO CORPO --- */
+
+main.content {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 65px); /* Subtrai a altura do cabeçalho */
+}
+
+.left-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha o conteúdo verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda na metade esquerda */
+    padding-left: 2rem; /* Alinha o conteúdo à esquerda */
+}
+
+.left-logo {
+    max-width: 70%; /* Limita a largura da logo para 70% */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    margin: 0 auto 2rem auto; /* Centraliza a logo na metade esquerda */
+}
+
+.intro-text {
+    font-family: 'Alexandria', serif;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: left; /* Alinha o texto à esquerda */
+    line-height: 0.5;
+}
+
+.intro-text2 {
+    font-family: 'Alexandria', serif;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: left; /* Alinha o texto à esquerda */
+    line-height: 0.5;
+}
+
+.left-btn-login {
+    font-family: 'Alexandria', serif;
+    font-size: 1.0rem;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    padding: 0.4rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    align-self: flex-start; /* Alinha o botão de login à esquerda */
+}
+
+.left-btn-login:hover {
+    background-color: white;
+    color: #7140AD;
+}
+
+.right-section {
+    width: 50%;
+    background-color: #5A2A7E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

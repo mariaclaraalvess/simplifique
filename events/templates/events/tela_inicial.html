@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <!-- Logo alinhada à esquerda -->
+        <!-- Logo alinhada à esquerda no cabeçalho -->
         <img src="https://github.com/mariaclaraalvess/simplifique/blob/master/simplifique%20(5).png?raw=true" alt="Logo" class="logo">
         
         <!-- Links centralizados -->
@@ -24,5 +24,26 @@
         <!-- Botão de login à direita -->
         <a href="{% url 'login' %}" class="login-btn">Login</a>
     </header>
+
+    <main class="content">
+        <!-- Lado esquerdo com a logo e o texto -->
+        <div class="left-section">
+            <img src="https://github.com/mariaclaraalvess/simplifique/blob/master/simplifique%20(6).png?raw=true" alt="Logo" class="left-logo">
+            <p class="intro-text">
+                <br>Organize seus eventos de forma fácil e eficiente!<br>
+                <br>Aqui você pode criar, gerenciar e compartilhar<br>
+                <br>eventos com poucos cliques.<br>
+            </p>
+            <p class="intro-text2">
+                <br>Personalize cada detalhe, receba notificações<br>
+                <br>importantes e conecte-se com seus participantes<br>
+                <br>de maneira prática.<br>
+            </p>
+            <a href="{% url 'login' %}" class="login-btn">Login</a>
+        </div>
+
+        <!-- Lado direito permanece vazio -->
+        <div class="right-section"></div>
+    </main>
 </body>
 </html>
