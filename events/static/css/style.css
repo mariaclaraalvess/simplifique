@@ -148,6 +148,7 @@ main.content {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    color:#fff;
 }
 
 /* Botões de navegação (anterior e próximo) */
@@ -155,15 +156,19 @@ main.content {
     font-size: 20px;
     padding: 5px 10px;
     cursor: pointer;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: transparent; /* Sem fundo */
+    border: 1px solid white; /* Borda branca */
     border-radius: 5px;
     margin: 0 5px;
+    color: white; /* Cor do texto em branco */
 }
 
 #prev-ano:hover, #prev-mes:hover, #next-mes:hover, #next-ano:hover {
-    background-color: #edd432ac;
+    background-color: transparent; /* Sem fundo ao passar o mouse */
+    color: #FEE440; /* Cor do texto ao passar o mouse (amarelo) */
+    border: 1px solid #FEE440; /* Borda amarela ao passar o mouse */
 }
+
 
 /* Estilo da tabela do calendário */
 table {
@@ -214,9 +219,16 @@ td:hover {
         padding: 10px;
     }
 
-    #mes-ano {
-        font-size: 20px;
-    }
+    /* Estilo do cabeçalho (mes/ano) */
+    /* Estilo do cabeçalho (mes/ano) */
+#calendario #mes-ano {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff !important; /* Forçar cor do texto para branco */
+}
+
+
 
     table {
         font-size: 14px;
