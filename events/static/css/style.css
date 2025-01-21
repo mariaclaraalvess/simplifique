@@ -159,16 +159,14 @@ main.content {
     padding: 5px 10px;
     cursor: pointer;
     background-color: transparent; /* Sem fundo */
-    border: 1px solid white; /* Borda branca */
-    border-radius: 5px;
     margin: 0 5px;
     color: white; /* Cor do texto em branco */
+    border: none; /* Remover bordas */
 }
 
 #prev-ano:hover, #prev-mes:hover, #next-mes:hover, #next-ano:hover {
     background-color: transparent; /* Sem fundo ao passar o mouse */
-    color: #FEE440; /* Cor do texto ao passar o mouse (amarelo) */
-    border: 1px solid #FEE440; /* Borda amarela ao passar o mouse */
+    color: #9B5DE5; /* Cor do texto ao passar o mouse (amarelo) */
 }
 
 
@@ -188,6 +186,7 @@ th {
     background-color: #FEE440;
     color: #9b5de5;
     font-weight: bold;
+    border: 1px solid #9B5DE5; /* Adicionar borda roxa */
 }
 
 /* Estilo das células de dias */
