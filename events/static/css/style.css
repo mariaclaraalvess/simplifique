@@ -97,13 +97,15 @@ main.content {
 }
 
 .intro-text, .intro-text2 {
+    display: flex;
     font-family: 'Alexandria', serif;
     font-size: 1.2rem;
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;  /* Reduzido para ajustar o espaçamento entre as linhas */
     text-align: left;
-    line-height: 0.5;
+    line-height: 0.9;  /* Ajuste o line-height para garantir que o texto tenha espaçamento adequado */
 }
+
 
 .left-btn-login {
     font-family: 'Alexandria', serif;
