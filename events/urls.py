@@ -5,7 +5,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('', views.tela_inicial, name='tela_inicial'),
     path('painel/', views.painel_controle, name='painel_controle'),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('login/', auth_views.LoginView.as_view(), name='login'),  # Usando a LoginView do Django
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('cadastro/', views.cadastro, name='cadastro'),
 ]

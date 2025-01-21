@@ -1,0 +1,172 @@
+/* Importando a fonte Alexandria */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Definindo a caixa de modelo para todos os elementos */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    background-color: #9B5DE5; /* Cor de fundo da página */
+    margin: 0;
+    font-size: 16px; /* Tamanho da fonte */
+    overflow-x: hidden; /* Previne rolagem horizontal */
+}
+
+/* --- CONFIGURAÇÕES DO CABEÇALHO --- */
+
+header {
+    background-color: #7140AD; /* Cor de fundo do cabeçalho */
+    height: 65px; /* Altura do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    width: 100%;
+    display: flex;
+    align-items: center; /* Alinhamento vertical dos itens */
+    justify-content: space-between; /* Espaço entre os itens */
+    padding: 0 2rem; /* Espaçamento à esquerda e à direita */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+.logo {
+    height: 3rem; /* Altura da logo */
+    width: auto; /* Largura automática para manter a proporção */
+}
+
+nav.menu {
+    display: flex;
+    justify-content: center; /* Alinha os itens do menu ao centro */
+    flex-grow: 1; /* O menu ocupa o espaço restante */
+    text-align: center; /* Centraliza o texto dentro do menu */
+    gap: 6rem; /* Espaço entre os itens */
+}
+
+nav.menu a {
+    font-family: 'Alexandria', serif; /* Fonte do menu */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    padding: 0; /* Remove o padding do link */
+}
+
+nav.menu a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.login-btn {
+    font-family: 'Alexandria', serif; /* Fonte do botão de login */
+    font-size: 1.0rem; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    background-color: transparent; /* Fundo transparente */
+    border: 3px solid white; /* Borda branca */
+    padding: 0.4rem 2rem; /* Espaçamento dentro do botão */
+    border-radius: 50px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado do link */
+    display: inline-block; /* Exibe como bloco em linha */
+    margin-right: 2rem; /* Espaço à direita do botão */
+}
+
+.login-btn:hover {
+    background-color: white; /* Cor de fundo do botão ao passar o mouse */
+    color: #7140AD; /* Cor do texto ao passar o mouse */
+}
+
+/* --- CONFIGURAÇÕES DO CORPO --- */
+
+main.content {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    height: calc(100vh - 65px); /* Altura do conteúdo, descontando a altura do cabeçalho */
+    align-items: center; /* Alinha verticalmente */
+}
+
+
+
+/* Container centralizado para o retângulo */
+.center-container {
+    display: flex;
+    justify-content: center; /* Alinha o retângulo ao centro */
+    align-items: center; /* Alinha o retângulo verticalmente */
+    height: 100%; /* Ocupa toda a altura disponível */
+}
+
+/* Retângulo onde o conteúdo está */
+.rectangle {
+    background-color: #7140AD; /* Cor de fundo do retângulo */
+    width: 450px; /* Largura do retângulo */
+    height: 500px; /* Altura do retângulo */
+    padding: 20px; /* Espaçamento interno do retângulo */
+    display: flex;
+    flex-direction: column; /* Organiza os itens de forma vertical */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    position: relative; /* Permite que os campos saiam do retângulo */
+    margin-top: 50px; /* Move todo o retângulo mais para baixo */
+}
+
+/* Título (LOGIN) */
+.rectangle h1 {
+    font-family: 'Alexandria', serif;
+    color: #FEE440; /* Cor do título */
+    font-size: 2rem;
+    position: absolute; /* Permite o movimento independente */
+    top: 50px; /* Mova o título para cima */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Grupo de campos */
+.form-group {
+    margin-bottom: 20px; /* Espaço abaixo de cada grupo de formulário */
+    width: 100%; /* O grupo ocupa 100% da largura do container */
+    position: relative; /* Permite que os campos saiam do retângulo */
+}
+
+
+/* Rótulos (e-mail, senha) */
+.form-group label {
+    font-family: 'Alexandria', serif;
+    color: white;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5px; /* Mantém o espaço entre o rótulo e o campo */
+    margin-left: -80px; /* Move o rótulo um pouco para a esquerda */
+    position: relative;
+    top: -4px; /* Mantém a posição ajustada do rótulo */
+}
+
+/* Campos de entrada */
+.form-group input {
+    width: 80%; /* Largura completa do campo */
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: none;
+    margin-top: -15px; /* Mantém o espaçamento entre o campo e o rótulo */
+    margin-bottom: 1.5px; /* Diminui a margem inferior para aproximar do rótulo */
+    margin-left: -10px; /* Move os campos de entrada um pouco para a esquerda */
+    z-index: 10; /* Garante que o campo esteja acima do retângulo */
+}
+
+/* Aumenta a largura do campo de entrada (apenas para a direita) */
+.form-group input[type="email"], .form-group input[type="password"] {
+    width: calc(100% + 190px); /* Aumenta a largura para ultrapassar o retângulo */
+}
+
+/* Botão de envio */
+.login-btn-submit {
+    background-color: #9B5DE5;
+    color: white;
+    padding: 10px 80px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 40px; /* Move o botão mais para baixo */
+}
+
+/* Efeito de hover do botão */
+.login-btn-submit:hover {
+    background-color: #FEE440;
+}

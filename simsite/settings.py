@@ -52,11 +52,24 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'simsite.urls'
 
+# Authentication configuration
+LOGIN_REDIRECT_URL = 'painel_controle'
+LOGOUT_REDIRECT_URL = 'tela_inicial'
+LOGIN_URL = 'login'
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'events/static'),
+]
+
+# Templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # Confirme que esse diretório existe
-        'APP_DIRS': True,  # Permite que o Django procure em templates dos apps
+        'DIRS': [BASE_DIR / 'templates'],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -67,6 +80,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 
 WSGI_APPLICATION = 'simsite.wsgi.application'
