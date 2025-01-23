@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Inicial</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria&display=swap" rel="stylesheet"> <!-- Importando a fonte Alexandria -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css">
 </head>
 <body>
@@ -18,27 +18,19 @@
             <a href="#">Quem Somos</a>
             <a href="#">Suporte</a>
         </nav>
-        <a href="{% url 'login' %}" class="login-btn">Login</a>
+        <a href="{% url 'tela_inicial' %}" class="login-btn">Home</a>
     </header>
 
     <main class="content">
-        <div class="center-container">
-            <!-- Retângulo centralizado com os campos -->
-            <div class="rectangle">
-                <h1>LOGIN</h1>
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" required placeholder="Digite seu e-mail">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Senha</label>
-                        <input type="password" name="password" id="password" required placeholder="Digite sua senha">
-                    </div>
-                    <button type="submit" class="login-btn-submit">Entrar</button>
-                </form>
-            </div>
+        <div class="rectangle">
+            <h1>Login</h1>
+            <form action="#">
+                <input type="text" placeholder="Usuário ou Email" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <a href="#">Esqueci minha senha</a>
+            <a href="{% url 'cadastro' %}">Não tenho conta</a>
         </div>
     </main>
 </body>
